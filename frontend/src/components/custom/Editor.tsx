@@ -10,7 +10,7 @@ export default function Editor() {
   // Renders the editor instance using a React component.
   return (
     <>
-      <BlockNoteView className="h-full w-full" editor={editor} />
+      <BlockNoteView className="h-full w-full bg-stone-800" editor={editor} />
     </>
   );
 }
