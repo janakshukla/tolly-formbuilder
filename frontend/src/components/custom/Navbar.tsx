@@ -11,9 +11,9 @@ const navitems = [
 ]
 
   return (
-    <nav className="flex justify-between items-center bg-gray-800 p-4 text-white">
+    <nav className="flex justify-between items-center bg-gray-100 p-4 text-gray-700">
         <div>
-       <Link to={"/"} className="text-2xl font-bold text-white hover:text-gray-300">
+       <Link to={"/"} className="text-xl font-bold  hover:text-gray-300">
        LOGO
        </Link>
         </div>
@@ -26,8 +26,8 @@ const navitems = [
                 className={({ isActive }) =>
                     
                     isActive
-                      ? "px-4 py-2 mx-2 text-gray-700 bg-gray-100 rounded-md "  
-                      : "text-gray-100 px-2 py-2 mx-2 "
+                      ? "px-4 py-2 mx-2 text-gray-100 bg-gray-800 rounded-md "  
+                      : "text-gray-600 px-2 py-2 mx-2 "
                   }
             >
                 {item.name}

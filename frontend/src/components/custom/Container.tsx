@@ -1,14 +1,14 @@
 import React from "react";
 import Navbar from "./Navbar";
 interface MyComponentProps {
-  childern: React.ReactNode;
+  children: React.ReactNode;
 }
 
-const Container: React.FC<MyComponentProps> = ({ childern }) => {
+const Container: React.FC<MyComponentProps> = ({ children }) => {
   return (
-    <div>
+    <div className="bg-cream">
       <Navbar />
-      <div>{childern}</div>
+      <div className="overflow-x-hidden" >{children}</div>
     </div>
   );
 };
