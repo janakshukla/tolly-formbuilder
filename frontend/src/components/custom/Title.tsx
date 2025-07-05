@@ -3,6 +3,7 @@ import { en } from "@blocknote/core/locales";
 import { BlockNoteView } from "@blocknote/mantine";
 import "@blocknote/mantine/style.css";
 import { useCreateBlockNote } from "@blocknote/react";
+import "@blocknote/core/fonts/inter.css";
 export default function Title() {
   const locale = en;
   // Creates a new editor instance.
@@ -10,6 +11,10 @@ export default function Title() {
     initialContent: [
       {
         type: "heading",
+        props: {
+          level: 1,
+        },
+        
       },
     ],
     dictionary: {
@@ -24,7 +29,7 @@ export default function Title() {
   return (
     <>
       <BlockNoteView
-        className="mb-4"
+        className="mb-4 "
         formattingToolbar={false}
         linkToolbar={false}
         filePanel={false}
