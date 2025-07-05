@@ -6,7 +6,7 @@ interface MyComponentProps {
 
 const Container: React.FC<MyComponentProps> = ({ children }) => {
   return (
-    <div className="bg-cream">
+    <div className="bg-cream  ">
       <Navbar />
       <div className="overflow-x-hidden" >{children}</div>
     </div>

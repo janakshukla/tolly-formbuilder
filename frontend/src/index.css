@@ -5,6 +5,7 @@
 
 @theme {
   --color-cream: oklch(0.971 0.013 17.38); /* Or use a hex code like #fffdd0 */
+  --color-editor:#1f1f1f;
 }
 
 @theme inline {
