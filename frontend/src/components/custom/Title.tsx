@@ -28,16 +28,7 @@ export default function Title() {
   });
   return (
     <>
-      {/* <BlockNoteView
-        className="mb-4 "
-        formattingToolbar={false}
-        linkToolbar={false}
-        filePanel={false}
-        sideMenu={false}
-        slashMenu={false}
-        tableHandles={false}
-        editor={editor}
-      /> */}
+
       <input className="outline-0 ring-0 font-bold placeholder:opacity-30 text-white ml-18 mb-8 text-2xl sm:text-4xl  " placeholder="Form title" type="text" />
     </>
   );
