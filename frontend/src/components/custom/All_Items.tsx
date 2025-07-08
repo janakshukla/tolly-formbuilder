@@ -1,7 +1,7 @@
 //@ts-nocheck
 import { insertOrUpdateBlock, type BlockNoteEditor } from "@blocknote/core";
 import type { DefaultReactSuggestionItem } from "@blocknote/react";
-import { MessageCircleQuestion } from "lucide-react";
+import { MessageCircleQuestion,NotepadTextDashedIcon } from "lucide-react";
 import { HiOutlineCursorClick } from "react-icons/hi";
 
 export const inputItem = (editor: BlockNoteEditor): DefaultReactSuggestionItem => ({
@@ -32,3 +32,17 @@ export const labelitem = (editor: BlockNoteEditor): DefaultReactSuggestionItem =
   ),
   subtext: "This can be used to ask question"
 })
+
+export const textareaItem = (editor: BlockNoteEditor): DefaultReactSuggestionItem => ({
+  title: "Text Area",
+  group: "Form fields",
+  aliases: ["textarea", "text", "field"],
+  icon: <NotepadTextDashedIcon size={18} />,
+  onItemClick: () =>
+    insertOrUpdateBlock(editor, {
+      type: "textArea",
+      props: { placeholder: "Type placeholder" }
+    },
+  ),
+  subtext: "this can be used to create long answers question."
+});

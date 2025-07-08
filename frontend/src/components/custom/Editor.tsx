@@ -7,7 +7,7 @@ import {
 import { BlockNoteEditor, filterSuggestionItems } from "@blocknote/core";
 import { formSchema } from "@/lib/formSchema";
 import { BlockNoteView } from "@blocknote/mantine";
-import { inputItem, labelitem } from "./All_Items";
+import { inputItem, labelitem, textareaItem } from "./All_Items";
 
 export default function FormEditor() {
   const editor = useCreateBlockNote({ schema: formSchema });
@@ -16,6 +16,7 @@ export default function FormEditor() {
     ...getDefaultReactSlashMenuItems(ed),
     inputItem(ed),
     labelitem(ed),
+    textareaItem(ed),
   ];
 
   return (
