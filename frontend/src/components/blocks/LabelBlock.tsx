@@ -1,4 +1,3 @@
-// components/blocks/LabelBlock.tsx
 import { createReactBlockSpec } from "@blocknote/react";
 interface TextInputProps {
   name: string;
@@ -18,27 +17,26 @@ export const LabelBlock = createReactBlockSpec(
       placeholder: { default: "Your question" },
       required: { default: false },
       label: { default: "Text Input" },
-      default: { default: "" }
-    }as const,
+      default: { default: "" },
+    } as const,
   },
   /* ---------- renderer ---------- */
   {
     render: ({ block, editor }) => {
-        const props = block.props as TextInputProps;
-      
-        return (
-         
-            <input
-              className="w-full outline-none ring-0 px-3 py-2 text-2xl font-medium focus:outline-none"
-              placeholder={props.placeholder}
-              required={props.required}
-              value={props.default || ""}
-              onChange={(e) =>
-                editor.updateBlock(block, {
-                  props: { ...props, default: e.target.value }
-                })
-              }
-            />
+      const props = block.props as TextInputProps;
+
+      return (
+        <input
+          className="w-full  px-3 py-2 text-xl md:text-2xl font-medium "
+          placeholder={props.placeholder}
+          required={props.required}
+          value={props.default || ""}
+          onChange={(e) =>
+            editor.updateBlock(block, {
+              props: { ...props, default: e.target.value },
+            })
+          }
+        />
       );
     },
   }

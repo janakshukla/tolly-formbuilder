@@ -28,7 +28,7 @@ export const TextInputBlock = createReactBlockSpec(
       return (
        
           <input
-            className="w-1/3 rounded border px-3 py-2 text-sm focus:outline-none"
+            className=" rounded border px-3 py-2 text-sm focus:outline-none"
             placeholder={props.placeholder}
             required={props.required}
             value={props.default || ""}

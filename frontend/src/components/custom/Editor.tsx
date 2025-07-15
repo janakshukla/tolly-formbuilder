@@ -19,8 +19,8 @@ export default function FormEditor() {
     textareaItem(ed),
   ];
 
-  return (
-    <BlockNoteView editor={editor} slashMenu={false}>
+  return ( 
+    <BlockNoteView className="md:ml-4  " editor={editor} slashMenu={false}>
       <SuggestionMenuController
         triggerCharacter="/"
         getItems={async (query) =>
