@@ -1,4 +1,5 @@
 import { createReactBlockSpec } from "@blocknote/react";
+import { Textarea } from "../ui/textarea";
 
 interface TextAreaProps {
     name: string;
@@ -25,7 +26,7 @@ interface TextAreaProps {
             const props = block.props as TextAreaProps;
 
             return (
-                <textarea
+                <Textarea
                     className="w-full rounded border px-3 py-2 text-sm focus:outline-none"
                     placeholder={props.placeholder}
                     required={props.required}

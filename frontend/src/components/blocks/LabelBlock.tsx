@@ -1,4 +1,5 @@
 import { createReactBlockSpec } from "@blocknote/react";
+import { Input } from "../ui/input";
 interface TextInputProps {
   name: string;
   placeholder: string;
@@ -26,8 +27,8 @@ export const LabelBlock = createReactBlockSpec(
       const props = block.props as TextInputProps;
 
       return (
-        <input
-          className="w-full  px-3 py-2 text-xl md:text-2xl font-medium "
+        <Input
+          className="w-full outline-none border-0 focus:outline-none  px-3 py-2 text-xl md:text-2xl font-medium "
           placeholder={props.placeholder}
           required={props.required}
           value={props.default || ""}

@@ -1,4 +1,5 @@
 import { createReactBlockSpec } from "@blocknote/react";
+import { Input } from "../ui/input";
 
 // Define the props interface
 interface TextInputProps {
@@ -27,8 +28,8 @@ export const TextInputBlock = createReactBlockSpec(
       
       return (
        
-          <input
-            className=" rounded border px-3 py-2 text-sm focus:outline-none"
+          <Input
+            className=" rounded border  text-sm focus:outline-none"
             placeholder={props.placeholder}
             required={props.required}
             value={props.default || ""}
